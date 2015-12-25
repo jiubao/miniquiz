@@ -1,21 +1,14 @@
-var codes = {
-
-};
-
 var quizzes = [{
-		code:
+	code:
 "(function(){\
     return typeof arguments;\
 })();",
-		options: ["object", "array", "arguments", "undefined"],
-		index: 0
-	}, {
-		code:
+	options: ["object", "array", "arguments", "undefined"],
+	index: 0
+}, {
+	code:
 "var f = function g(){ return 23; };\
 typeof g();",
-		options: ["number", "undefined", "function", "Error"],
-		index: 3
-	}
-
-]
-;
+	options: ["number", "undefined", "function", "Error"],
+	index: 3
+}];
