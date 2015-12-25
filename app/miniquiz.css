@@ -1,0 +1,29 @@
+body {
+	background: #f5f2f0;
+}
+
+.actions:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.actions > form{
+	float: left;
+}
+
+.actions > a {
+	float: right;
+}
+
+.spec {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+#templates {
+	display: none;
+}
