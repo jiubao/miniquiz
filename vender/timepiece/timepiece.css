@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'Timepiecerounded-tfin';
+    src: url('timepiecerounded-tfin.eot');
+    src: url('timepiecerounded-tfin.eot?#iefix') format('embedded-opentype'),
+         url('timepiecerounded-tfin.woff') format('woff'),
+         url('timepiecerounded-tfin.ttf') format('truetype');
+    src: url("Timepiecerounded-tfin.otf") format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Timepiecerounded-MissSwiss';
+    src: url('timepiecerounded-missswiss.eot');
+    src: url('timepiecerounded-missswiss.eot?#iefix') format('embedded-opentype'),
+         url('timepiecerounded-missswiss.woff') format('woff'),
+         url('timepiecerounded-missswiss.ttf') format('truetype');
+     src: url("Timepiecerounded-MissSwiss.otf") format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Timepiecerounded-Blackforest';
+    src: url('timepiecerounded-blackforest.eot');
+    src: url('timepiecerounded-blackforest.eot?#iefix') format('embedded-opentype'),
+         url('timepiecerounded-blackforest.woff') format('woff'),
+         url('timepiecerounded-blackforest.ttf') format('truetype');
+    src: url("Timepiecerounded-Blackforest.otf") format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.timepiece {
+    float: left;
+    width: 50%;
+    height: 50%;
+    display: table;
+    text-align: center;
+    min-width: 390px; min-height: 390px;
+}
+
+h1 {
+    font-size: 1.8em;
+    line-height: 0.9em;
+}
+
+.description {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10%;
+}
+
+.description p {
+    font-size: 0.9em;
+}
+
+.de {
+font-style: italic;
+}
+
+
+a:link, a:active, a:hover, a:visited {
+    text-decoration: none;
+    color: #0099cc;
+}
+
+.no-shadow {
+    text-shadow: none !important;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10%;
+}
+
+.clock {
+    font-size: 260px;
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+}
+
+.tfin {
+    float: right;
+    background-color: #000;
+ }
+
+.tfin .fallback-description {
+    color: #cccccc;
+}
+
+
+#tfin {
+    font-family: Timepiecerounded-tfin, sans-serif;
+    color: #00D9EF;
+    text-shadow: 0px 0px 36px rgba(0,128,255,0.7),
+                 0px 0px 16px rgba(0,128,255,0.7),
+                 0px 0px 2px rgba(255,128,255,0.9);
+}
+
+.blackforest {
+    background-image:url(../img/wood01.jpg);
+    float: left;
+    clear: both;
+ }
+
+.blackforest .fallback-description,
+#blackforest {
+    font-family: Timepiecerounded-Blackforest, sans-serif;
+    color: #eee;
+    text-shadow: 1px 1px #000, 4px 4px 7px rgba(0,0,0,0.8);
+}
+
+.missswiss {
+    float: right;
+}
+
+
+#missswiss {
+    font-family: Timepiecerounded-MissSwiss, sans-serif;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+
+/* PAGES */
+
+
+#pages {
+    display: none;
+}
+
+#readmore, #imprint {
+    padding: 30px;
+    font-family: "republic-web",serif;
+    font-size: 0.9em;
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width: 780px) {
+  .timepiece {
+    width: 100%;
+    min-width: 320px;
+    min-height: 320px;
+  }
+}
+
+
+
+/**
+ * ColorBox Core Style:
+ * The following CSS is consistent between example themes and should not be altered.
+ */
+
+
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left;
+}
+#cboxContent {
+  position: relative;
+}
+#cboxLoadedContent {
+  overflow: auto;
+}
+#cboxTitle {
+  margin: 0;
+}
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer;
+}
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+}
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+#colorbox, #cboxContent, #cboxLoadedContent {
+  box-sizing: content-box;
+}
+
+/**
+ * Colorbox module Stockholm syndrome style:
+ * The styles are ordered & tabbed in a way that represents
+ * the nesting of the generated HTML.
+ */
+#cboxOverlay {
+  background: #000;
+  opacity: 0.4 !important;
+}
+
+#colorbox {
+  background: #fff url(images/bg_tab.png) center bottom repeat-x;
+  -moz-box-shadow: 3px 3px 16px #333;
+  -webkit-box-shadow: 3px 3px 16px #333;
+  box-shadow: 3px 3px 16px #333;
+}
+#colorbox, #colorbox div {
+  overflow: visible; /* Required by the close button. */
+}
+  #cboxWrapper {
+  }
+
+
+/* The following are fixes for IE. */
+.cboxIE6 #cboxTitle {
+  background: #fff;
+}

@@ -27,3 +27,17 @@ body {
 #templates {
 	display: none;
 }
+
+.clock {
+	display: none;
+    font-size: 250px;
+    position: absolute;
+    right: -70px;
+    top: -70px;
+    z-index: 9;
+}
+
+.container {
+	position: relative;
+	padding-top: 200px;
+}

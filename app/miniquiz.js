@@ -48,10 +48,31 @@ $(document).ready(function() {
     $('.toggleSpec').on('click', function() {
     	$(this).closest('.actions').siblings('.spec').toggleClass('show');
     });
+
+    initTimer();
+    $clock.show();
+    setInterval(initTimer, 1000);
+    // initTimer();
 });
 
 function decodeEntities(encodedString) {
     var textArea = document.createElement('textarea');
     textArea.innerHTML = encodedString;
     return textArea.value;
+}
+
+var $clock = $('#missswiss');
+function initTimer() {
+    var d = new Date();
+    var hour = d.getHours();
+    var minute = d.getMinutes();
+    var second = d.getSeconds();
+
+    var time = getTimeText(hour) + ':' + getTimeText(minute) + ':' + getTimeText(second);
+
+    $clock.html(time);
+}
+
+function getTimeText(t) {
+    return t > 10 ? '' + t : '0' + t;
 }
