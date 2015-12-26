@@ -49,10 +49,11 @@ $(document).ready(function() {
     	$(this).closest('.actions').siblings('.spec').toggleClass('show');
     });
 
-    initTimer();
-    $clock.show();
-    setInterval(initTimer, 1000);
     // initTimer();
+    $clock.show();
+    setInterval(setTimer, 1000);
+    // initTimer();
+    //setTimer();
 });
 
 function decodeEntities(encodedString) {
@@ -62,7 +63,7 @@ function decodeEntities(encodedString) {
 }
 
 var $clock = $('#missswiss');
-function initTimer() {
+function setTimer() {
     var d = new Date();
     var hour = d.getHours();
     var minute = d.getMinutes();
@@ -71,8 +72,10 @@ function initTimer() {
     var time = getTimeText(hour) + ':' + getTimeText(minute) + ':' + getTimeText(second);
 
     $clock.html(time);
+
+    // setTimeout(setTimer, 1000);
 }
 
 function getTimeText(t) {
-    return t > 10 ? '' + t : '0' + t;
+    return t > 9 ? '' + t : '0' + t;
 }

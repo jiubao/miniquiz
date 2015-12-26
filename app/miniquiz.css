@@ -8,14 +8,6 @@ body {
 	display: block;
 }
 
-.actions > form{
-	float: left;
-}
-
-.actions > a {
-	float: right;
-}
-
 .spec {
 	display: none;
 }
@@ -40,4 +32,8 @@ body {
 .container {
 	position: relative;
 	padding-top: 120px;
+}
+
+.result-right, .result-wrong, form {
+	line-height: 36px;
 }

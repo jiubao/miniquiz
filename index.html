@@ -16,43 +16,48 @@
 <body>
 <div class="container">
 <h1>Mini Quiz</h1>
-<span id="missswiss" class="clock">23:51:19</span>
+<span id="missswiss" class="clock"></span>
 
 <i class="material-icons green-text ltext-lighten-2" style="font-size: 50px; display: none;">wb_incandescent</i>
 </div>
 
 <div id="templates">
 	<div id="tpl-card">
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="card darken-1">
 
-      <div class="row">
-        <div class="col s12 m12">
-		<div class="card darken-1">
-            <div class="card-content">
-              <span class="card-title"><%=title%></span>
-             <pre><code class="language-javascript"><%=code%></code></pre>
-            </div>
-            <div class="card-action">
-            <div class="actions">
-              <form action="#">
-
-              <% options.forEach(function(option){ %>
-			      <input name="<%=group%>" type="radio" id="<%=option.id%>" data-hit="<%=option.hit%>" />
-			      <label for="<%=option.id%>"><%=option.value%></label>
-              <% }) %>
-
-			      <i class="material-icons right green-text result-right">done</i>
-			      <i class="material-icons right red-text result-wrong">close</i>
-			  </form>
-              <a class="toggleSpec" href="#">View Explanation</a>
-              </div>
-              <div class="spec">
-              	contents
-              </div>
-            </div>
+          <div class="card-content">
+            <span class="card-title"><%=title%></span>
+            <pre><code class="language-javascript"><%=code%></code></pre>
           </div>
+
+          <div class="card-action">
+            <div class="actions">
+              <form action="#" class="left">
+
+                <% options.forEach(function(option){ %>
+                  <input name="<%=group%>" type="radio" id="<%=option.id%>" data-hit="<%=option.hit%>" />
+                  <label for="<%=option.id%>"><%=option.value%></label>
+                <% }) %>
+
+                <i class="material-icons right green-text result-right">done</i>
+                <i class="material-icons right red-text result-wrong">close</i>
+
+              </form>
+
+              <button class="toggleSpec btn waves-effect waves-light right" type="submit" name="action">
+                <i class="material-icons left">info_outline</i>
+                View Explanation
+              </button>
+            </div>
+
+            <div class="spec">contents</div>
+          </div>
+
         </div>
       </div>
-
+    </div>
 	</div>
 </div>
 
