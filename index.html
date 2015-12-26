@@ -7,7 +7,11 @@
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="vender/materialize/css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="vender/prism/prism.css"  media="screen,projection"/>
+
+      <!--
       <link type="text/css" rel="stylesheet" href="vender/timepiece/timepiece.css"  media="screen,projection"/>
+      -->
+
       <link type="text/css" rel="stylesheet" href="app/miniquiz.css"  media="screen,projection"/>
 
       <!--Let browser know website is optimized for mobile-->
@@ -35,6 +39,7 @@
 </main>
 
 
+
 <div id="templates">
 	<div id="tpl-card">
     <div class="row">
@@ -43,7 +48,7 @@
 
           <div class="card-content">
             <span class="card-title"><%=title%></span>
-            <pre><code class="language-javascript"><%=code%></code></pre>
+            <pre class="language-javascript" data-language="JavaScript"><code class="language-javascript"><%=code%></code></pre>
           </div>
 
           <div class="card-action">
@@ -125,4 +130,12 @@
 
         </div>
       </div>
+
+
+      
+<pre class="language-javascript" data-language="JavaScript">
+<code>(function(){
+    return typeof arguments;
+})();</code>
+</pre>
 -->
