@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     var cardtpl = $('#tpl-card').html();
     cardtpl = decodeEntities(cardtpl);
-    var $container = $('.container');
+    var $container = $('main .container');
     quizzes.forEach(function(quiz) {
     	var card = ejs.render(cardtpl, quiz);
     	$container.append(card);
@@ -49,11 +49,8 @@ $(document).ready(function() {
     	$(this).closest('.actions').siblings('.spec').toggleClass('show');
     });
 
-    // initTimer();
-    $clock.show();
-    setInterval(setTimer, 1000);
-    // initTimer();
-    //setTimer();
+    // theTimer();
+
 });
 
 function decodeEntities(encodedString) {
@@ -62,20 +59,23 @@ function decodeEntities(encodedString) {
     return textArea.value;
 }
 
-var $clock = $('#missswiss');
-function setTimer() {
-    var d = new Date();
-    var hour = d.getHours();
-    var minute = d.getMinutes();
-    var second = d.getSeconds();
 
-    var time = getTimeText(hour) + ':' + getTimeText(minute) + ':' + getTimeText(second);
+function theTimer() {
+    var $clock = $('#missswiss');
+    function setTimer() {
+        var d = new Date();
+        var hour = d.getHours();
+        var minute = d.getMinutes();
+        var second = d.getSeconds();
 
-    $clock.html(time);
+        var time = getTimeText(hour) + ':' + getTimeText(minute) + ':' + getTimeText(second);
 
-    // setTimeout(setTimer, 1000);
-}
+        $clock.html(time);
+    }
 
-function getTimeText(t) {
-    return t > 9 ? '' + t : '0' + t;
+    function getTimeText(t) {
+        return t > 9 ? '' + t : '0' + t;
+    }
+
+    setInterval(setTimer, 1000);
 }

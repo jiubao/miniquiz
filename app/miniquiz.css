@@ -1,5 +1,19 @@
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
 body {
 	background: #f5f2f0;
+}
+
+header {
+	display: none;
 }
 
 .actions:after {
@@ -21,7 +35,6 @@ body {
 }
 
 .clock {
-	display: none;
     font-size: 250px;
     position: absolute;
     right: -70px;
@@ -29,9 +42,8 @@ body {
     z-index: 9;
 }
 
-.container {
+main .container {
 	position: relative;
-	padding-top: 120px;
 }
 
 .result-right, .result-wrong, form {

@@ -14,12 +14,26 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+
+<header>
+  <nav class="light-blue darken-3">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo white-text">Mini Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
 <div class="container">
 <h1>Mini Quiz</h1>
 <span id="missswiss" class="clock"></span>
 
 <i class="material-icons green-text ltext-lighten-2" style="font-size: 50px; display: none;">wb_incandescent</i>
 </div>
+
+</main>
+
 
 <div id="templates">
 	<div id="tpl-card">
@@ -37,7 +51,7 @@
               <form action="#" class="left">
 
                 <% options.forEach(function(option){ %>
-                  <input name="<%=group%>" type="radio" id="<%=option.id%>" data-hit="<%=option.hit%>" />
+                  <input class="with-gap" name="<%=group%>" type="radio" id="<%=option.id%>" data-hit="<%=option.hit%>" />
                   <label for="<%=option.id%>"><%=option.value%></label>
                 <% }) %>
 
@@ -46,7 +60,7 @@
 
               </form>
 
-              <button class="toggleSpec btn waves-effect waves-light right" type="submit" name="action">
+              <button class="toggleSpec btn waves-effect waves-light right blue-grey lighten-1" type="submit" name="action">
                 <i class="material-icons left">info_outline</i>
                 View Explanation
               </button>
